@@ -1,2 +1,2 @@
 # vyndevv.github.io
- The portfolio of a passionate young developer
+The best portofolio ever (i think...)
