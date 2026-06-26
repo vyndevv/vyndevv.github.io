@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="VynDev — vBackgroundRemover. Outil de suppression de fond d'image ultra-rapide propulsé par l'IA et WebAssembly.">
+  <title>vBackgroundRemover — VynDev</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-project-id="vbackgroundremover">
+
+  <main>
+    <div class="project-detail container">
+
+      <a href="../projects.html" class="back-link fade-in" data-i18n="project.back">
+        ← Retour aux projets
+      </a>
+
+      <!-- ===== HEADER ===== -->
+      <div class="project-detail-header">
+        <div class="fade-in delay-1">
+          <div class="project-tags" style="margin-bottom:16px;">
+            <span class="tag">AI</span>
+            <span class="tag">WASM</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <h1 class="project-detail-title">vBackgroundRemover<span style="color:var(--text-secondary)">.</span></h1>
+          <p class="project-detail-desc">
+            Une application web innovante permettant de supprimer l'arrière-plan de n'importe quelle image 
+            instantanément. Contrairement aux solutions classiques, celle-ci exécute l'IA directement 
+            dans votre navigateur grâce à WebAssembly, garantissant une confidentialité totale et une rapidité extrême.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">Vanilla CSS</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">WebAssembly</span>
+            <span class="tag">ONNX Runtime</span>
+          </div>
+        </div>
+
+        <div class="project-detail-meta fade-in delay-2">
+          <div class="meta-item">
+            <div class="meta-label" data-i18n="project.status">Statut</div>
+            <div class="meta-value" style="display:flex;align-items:center;gap:8px;">
+              <span style="width:7px;height:7px;background:var(--green);border-radius:50%;display:inline-block;animation:livePulse 2.5s infinite;"></span>
+              <span data-i18n="status.completed">Terminé</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label" data-i18n="project.year">Année</div>
+            <div class="meta-value">2026</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label" data-i18n="project.tech">Technologies</div>
+            <div class="meta-value">JS, WASM, @imgly/background-removal</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== BODY ===== -->
+      <div class="project-body fade-in delay-3">
+        <section>
+          <h2 data-i18n="project.overview">Vue d'ensemble</h2>
+          <p>
+            Ce projet est né de la volonté de créer un outil de traitement d'image professionnel accessible 
+            directement depuis un portfolio. Initialement développé avec Python (rembg) et CustomTkinter 
+            pour le desktop, j'ai pris la décision de le porter entièrement sur le web en utilisant les 
+            dernières technologies <strong>Client-Side</strong>.
+          </p>
+          <p>
+            L'enjeu technique majeur était de faire tourner des modèles d'IA lourds (ONNX) sans avoir besoin 
+            d'un serveur backend coûteux. Grâce à l'utilisation de <strong>WebAssembly (WASM)</strong>, 
+            l'application télécharge le modèle une seule fois et effectue tous les calculs sur le processeur 
+            de l'utilisateur. Cela permet un hébergement statique (GitHub Pages) tout en offrant des performances 
+            proches du natif.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="project.features">Fonctionnalités</h2>
+          <ul>
+            <li><strong>Traitement 100% Local</strong> : Vos images ne quittent jamais votre ordinateur.</li>
+            <li><strong>Précision IA</strong> : Utilisation de modèles de segmentation avancés pour un détourage parfait.</li>
+            <li><strong>Aperçu en temps réel</strong> : Comparaison instantanée entre l'original et le résultat.</li>
+            <li><strong>Progressive Loading</strong> : Suivi en direct du chargement et du traitement de l'IA (0-100%).</li>
+            <li><strong>Export Haute Qualité</strong> : Téléchargement direct au format PNG transparent.</li>
+            <li><strong>Interface Dark Minimal</strong> : Design épuré, réactif et optimisé pour tous les écrans.</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../i18n.js"></script>
+  <script src="../projects-config.js"></script>
+  <script src="../script.js"></script>
+
+</body>
+
+</html>

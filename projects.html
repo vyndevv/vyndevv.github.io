@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VynDev — All projects. FiveM Server, Discord Bot, YT Downloader and more.">
+  <title>Projects — VynDev</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="section-label fade-in" data-i18n="projects.label">Portfolio</div>
+        <h1 class="section-title fade-in delay-1" data-i18n="projects.title">My projects</h1>
+        <p class="section-subtitle fade-in delay-2" data-i18n="projects.subtitle">
+          A selection of projects I've been working on.
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 100px;">
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="projects-config.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function renderProjects() {
+      const grid = document.getElementById('projectsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      PROJECTS.forEach(project => {
+        grid.appendChild(createProjectCard(project, ''));
+      });
+      observeNewCards();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProjects);
+
+    function onLangChange() { renderProjects(); }
+  </script>
+
+</body>
+
+</html>

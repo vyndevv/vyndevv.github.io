@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact VynDev — Reach out via GitHub, Discord or email.">
+  <title>Contact — VynDev</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="section-label fade-in" data-i18n="contact.label">Get in touch</div>
+        <h1 class="section-title fade-in delay-1" data-i18n="contact.title">Let's work together</h1>
+        <p class="section-subtitle fade-in delay-2" data-i18n="contact.subtitle">
+          Have a project or a question? Don't hesitate to reach out.
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 100px;">
+      <div class="contact-grid">
+
+        <!-- ===== LINKS ===== -->
+        <div class="contact-info fade-in">
+          <a href="https://github.com/vyndevv" target="_blank" rel="noopener" class="contact-link" id="contactGithub">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <div class="contact-link-label" data-i18n="contact.github_label">GitHub</div>
+              <div class="contact-link-value">github.com/vyndevv</div>
+            </div>
+            <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.8rem;"></i>
+          </a>
+
+          <a href="https://discord.gg/y9BCJBj6" target="_blank" rel="noopener" class="contact-link" id="contactDiscord">
+            <div class="contact-icon"><i class="fab fa-discord"></i></div>
+            <div>
+              <div class="contact-link-label" data-i18n="contact.discord_label">Discord</div>
+              <div class="contact-link-value">v7f4</div>
+            </div>
+            <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.8rem;"></i>
+          </a>
+
+          <a href="mailto:pro.vyn7@gmail.com" class="contact-link" id="contactEmail">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-link-label" data-i18n="contact.email_label">Email</div>
+              <div class="contact-link-value">pro.vyn7@gmail.com</div>
+            </div>
+            <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.8rem;"></i>
+          </a>
+        </div>
+
+        <!-- ===== FORM ===== -->
+        <form class="contact-form fade-in delay-2" id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="formName" data-i18n="contact.form.name_label">Name</label>
+            <input type="text" id="formName" class="form-input" data-i18n-placeholder="contact.form.name_ph"
+              placeholder="Your name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="formEmail" data-i18n="contact.form.email_label">Email</label>
+            <input type="email" id="formEmail" class="form-input" data-i18n-placeholder="contact.form.email_ph"
+              placeholder="your@email.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="formMessage" data-i18n="contact.form.message_label">Message</label>
+            <textarea id="formMessage" class="form-textarea" data-i18n-placeholder="contact.form.message_ph"
+              placeholder="Your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="formSubmit" style="width:100%; justify-content:center;">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="contact.form.send">Send message</span>
+          </button>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <span data-i18n="contact.form.success">Message sent! I'll get back to you very soon.</span>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="projects-config.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Also handle [data-i18n-placeholder] on the contact page
+    document.addEventListener('DOMContentLoaded', () => {
+      function applyPlaceholders() {
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          const val = tr(key);
+          if (val) el.placeholder = val;
+        });
+      }
+      applyPlaceholders();
+      const origToggle = window.toggleLang;
+      window.toggleLang = function () {
+        origToggle && origToggle();
+        applyPlaceholders();
+      };
+    });
+  </script>
+
+</body>
+
+</html>

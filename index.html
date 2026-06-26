@@ -2,131 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <title>VynDev - Portofolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="VynDev — Developer & FiveM Creator. Portfolio of Vyn, a passionate developer specialized in FiveM and web development.">
+  <title>VynDev — Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <canvas id="particle-canvas"></canvas>
-    <div class="navbar">
-        <img src="assets/logo.png" alt="Logo VynDev">
-        <div class="separateur-v"></div>
-        <h3 class="home"><a href="#home">Home</a></h3>
-        <h3 class="aboutme"><a href="#aboutme">About me</a></h3>
-        <h3 class="myprojects"><a href="#myprojects">My projects</a></h3>
-        <h3 class="contactme"><a href="#contactme">Contact me</a></h3>
-    </div>
-    <div class="about-me" id="aboutme">
-        <img src="assets/pdp.jpg" alt="pdp">
-        <p class="aboutme-text">
-            Hey ! I'm Thelyo, mostly know as Vyn on the internet. Im' 16 and I'm a developper, mostly known for my work
-            on FiveM.
-            I'm passionated by developpement and i love creating new things. I'm also a big fan of video games and i
-            love playing them in my free time.
-        </p>
-    </div>
-    <div class="separateur-h"></div>
-    <div class="languages" id="home">
-        <div class="language-card language1">
-            <img src="assets/html-img.png" alt="HTML" class="html-img">
-            <h3 class="html-h3">HTML</h3>
+
+  <!-- Nav & Footer injected by script.js -->
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-badge fade-in">
+            <span class="dot"></span>
+            <span data-i18n="hero.badge">Available for work</span>
+          </div>
+
+          <div class="fade-in delay-1">
+            <span class="hero-greeting" data-i18n="hero.greeting">Hey, I'm</span>
+            <h1 class="hero-name">Vyn<span class="period">.</span></h1>
+            <span class="hero-tagline" data-i18n="hero.tagline">Developer & FiveM Creator</span>
+          </div>
+
+          <p class="hero-description fade-in delay-2" data-i18n="hero.description">
+            Passionate about development, I create unique digital experiences. Specialized in FiveM and web development.
+          </p>
+
+          <div class="hero-actions fade-in delay-3">
+            <a href="projects.html" class="btn btn-primary" id="heroCtaProjects">
+              <span data-i18n="hero.cta_projects">View my projects</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="assets/cv.pdf" download class="btn btn-secondary" id="heroCtaCV">
+              <i class="fas fa-download"></i>
+              <span data-i18n="hero.cta_cv">Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-stats fade-in delay-4">
+            <div>
+              <div class="stat-number">4+</div>
+              <div class="stat-label" data-i18n="hero.stat_projects">Projects</div>
+            </div>
+            <div>
+              <div class="stat-number">6+</div>
+              <div class="stat-label" data-i18n="hero.stat_months">Months of exp.</div>
+            </div>
+            <div>
+              <div class="stat-number">16</div>
+              <div class="stat-label" data-i18n="hero.stat_age">Years old</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-label fade-in" data-i18n="skills.label">Technologies</div>
+        <h2 class="section-title fade-in delay-1" data-i18n="skills.title">My skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card fade-in delay-1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+            <span class="skill-name">HTML</span>
+          </div>
+          <div class="skill-card fade-in delay-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+            <span class="skill-name">CSS</span>
+          </div>
+          <div class="skill-card fade-in delay-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt="JavaScript">
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card fade-in delay-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" alt="Lua">
+            <span class="skill-name">LUA</span>
+          </div>
+          <div class="skill-card fade-in delay-5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              alt="Python">
+            <span class="skill-name">Python</span>
+          </div>
+          <div class="skill-card fade-in delay-6">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL">
+            <span class="skill-name">SQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-label fade-in" data-i18n="featured.label">Portfolio</div>
+
+        <div class="section-header fade-in delay-1">
+          <div>
+            <h2 class="section-title" data-i18n="featured.title">Recent projects</h2>
+            <p class="section-subtitle" data-i18n="featured.subtitle">Here are some projects I've been working on.</p>
+          </div>
+          <a href="projects.html" class="btn btn-secondary" id="viewAllBtn">
+            <span data-i18n="featured.view_all">View all projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
 
-        <div class="language-card language2">
-            <img src="assets/css-img.png" alt="CSS" class="css-img">
-            <h3 class="css-h3">CSS</h3>
+        <div class="projects-grid" id="featuredGrid">
+          <!-- Populated dynamically -->
         </div>
+      </div>
+    </section>
 
-        <div class="language-card language3">
-            <img src="assets/lua-img.png" alt="LUA" class="lua-img">
-            <h3 class="lua-h3">LUA</h3>
-        </div>
+  </main>
 
-        <div class="language-card language4">
-            <img src="assets/python-img.png" alt="Python" class="python-img">
-            <h3 class="python-h3">PYTHON</h3>
-        </div>
+  <script src="i18n.js"></script>
+  <script src="projects-config.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Render featured projects
+    function renderFeatured() {
+      const grid = document.getElementById('featuredGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      PROJECTS.filter(p => p.featured).slice(0, 3).forEach(project => {
+        grid.appendChild(createProjectCard(project, ''));
+      });
+      observeNewCards();
+    }
 
-        <div class="language-card language5">
-            <img src="assets/sql-img.png" alt="SQL" class="sql-img">
-            <h3 class="sql-h3">SQL</h3>
-        </div>
-    </div>
-    <div class="separateur-h"></div>
+    document.addEventListener('DOMContentLoaded', renderFeatured);
 
-    <h3 class="project-title" id="myprojects">MY PROJECTS</h3>
-    <div class="projects">
-        <div class="project-card project-card1">
-            <h3 class="project-title project1">FiveM Server</h3>
-            <img src="assets/projects/fivem.png" alt="FiveM Server">
-            <div class="project-description">
-                <p>I have made a FiveM server with custom scripts and resources and a unique base. The project is
-                    currently in developpement and it's been like 6 months now that I Have been working on it.</p>
-            </div>
-        </div>
-        <div class="project-card project-card2">
-            <h3 class="project-title project2">YT Downloader</h3>
-            <img src="assets/projects/ytbmusic.png" alt="YTB Music">
-            <div class="project-description">
-                <p>A Python project I created while learning the language, which allows you to download a YouTube video
-                    as an MP3 file via a CustomTkinter interface.</p>
-            </div>
-        </div>
-        <div class="project-card project-card3">
-            <h3 class="project-title project3">Discord bot</h3>
-            <img src="assets/projects/discord.png" alt="Discord Bot">
-            <div class="project-description">
-                <p>A JavaScript Discord server management bot containing various management and utility commands, as
-                    well as many others. The project is currently under development.</p>
-            </div>
-        </div>
-        <div class="project-card project-card4">
-            <h3 class="project-title project4">Websites</h3>
-            <img src="assets/projects/website.png" alt="Websites">
-            <div class="project-description">
-                <p>Websites are a rather special category because, in my case, I was able to create several websites for
-                    my apprenticeship. Using HTML, I was able to expand my skills by creating user interfaces and many
-                    other things.</p>
-            </div>
-        </div>
-    </div>
+    // Re-render when language changes
+    function onLangChange() { renderFeatured(); }
+  </script>
 
-    <h3 class="project-title" id="myambitions">MY AMBITIONS</h3>
-    <div class="projects ambitions">
-        <div class="project-card ambition-card1">
-            <h3 class="ambition-card-title">IA</h3>
-            <img src="assets/projects/ia.png" alt="ia">
-            <div class="project-description">
-                <p>I would like to develop an AI agent that could assist with multiple tasks such as development, writing, etc.</p>
-            </div>
-        </div>
-        <div class="project-card ambition-card2">
-            <h3 class="ambition-card-title">Dev Team</h3>
-            <img src="assets/projects/engeneering.png" alt="devteam">
-            <div class="project-description">
-                <p>Later on, I would like to form a team with whom I can carry out every project that comes to mind.</p>
-            </div>
-        </div>
-        <div class="project-card ambition-card3">
-            <h3 class="ambition-card-title">Creation of games</h3>
-            <img src="assets/projects/joystick.png" alt="videogames">
-            <div class="project-description">
-                <p>Video game creation is a subject that has recently caught my interest, but it is extremely complex in nature. I would like to learn more about it in the future and even work in the field.</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="particles.js"></script>
-    <script src="script.js"></script>
 </body>
+
 </html>
